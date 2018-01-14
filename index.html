@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Punch Game In Vuejs</title>
+	<!-- vuejs -->
+	<script src="https://unpkg.com/vue@2.5.13/dist/vue.js"></script>
+
+	<!-- styles -->
+	<link rel="stylesheet" href="styles.css">
+</head>
+<body>
+	<div id="app">
+		<!-- punch image -->
+		<div id="bag-image" v-bind:class="{burst: ended}"></div>
+		
+		<!-- gamer helth -->
+		<div id="bag-health">
+			<div v-bind:style="{width: health + '%'}"></div>
+		</div>
+
+		<!-- game controls -->
+		<div id="controls">
+			<button v-on:click="punch" v-show="!ended">Punch</button>
+			<button v-on:click="reset">Reset</button>	
+		</div>
+		
+	</div>
+	<script src="app.js"></script>
+</body>
+</html>
